@@ -1,0 +1,452 @@
+[
+  {
+    "id": "Q001",
+    "category": "component",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided project evidence, VehicleControlSWC coordinates high-level vehicle behavior. This is consistent across both versions of the vehicle control high-level design (v1 and v2).",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.5875665280858228,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostics.\nPowertrainCoordinatorSWC is a new coordination component.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.5821764213707943,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostic\nrequests and health reporting.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 1,
+        "section": "Vehicle Control ECU - HLD v1",
+        "score": 0.47505803295603655,
+        "excerpt": "Vehicle Control ECU - HLD v1\nTitle and Document Control\nSYNTHETIC DATA FOR ACADEMIC PROJECT\nVehicle Control ECU - High Level Design\nDocument Version: v1\nSystem provides coordinated vehicle-speed and engine-speed control for a synthetic passenger vehicle.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 1"
+      },
+      {
+        "filename": "diagnostic_gateway_hld_v1.pdf",
+        "page": 4,
+        "section": "Dependencies",
+        "score": 0.47012664814019206,
+        "excerpt": "Dependencies\nDiagnosticGatewaySWC depends on DiagnosticManagerSWC for application-level diagnostic processing\nand on CAN0 for vehicle-side transport.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 5,
+        "section": "Dependencies",
+        "score": 0.4621253271497792,
+        "excerpt": "Dependencies\nVehicleControlSWC now depends on PowertrainCoordinatorSWC for powertrain coordination and\nSensorManagerSWC for vehicle speed. DiagnosticManagerSWC reads health information from\nEngineControlSWC and SensorManagerSWC.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      }
+    ]
+  },
+  {
+    "id": "Q002",
+    "category": "component",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, EngineControlSWC manages engine-control commands.",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.6317684102464536,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostic\nrequests and health reporting.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.5990753925800092,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostics.\nPowertrainCoordinatorSWC is a new coordination component.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 2,
+        "section": "Engine Components",
+        "score": 0.5916682947885757,
+        "excerpt": "Engine Components\nEngineControlSWC manages engine speed, engine state and engine control command processing.\nSensorManagerSWC supplies normalized engine sensor information.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 2"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Dependencies",
+        "score": 0.525168839435944,
+        "excerpt": "Dependencies\nEngineControlSWC depends on SensorManagerSWC for sensor input and VehicleControlSWC for\napproved engine command requests.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 2,
+        "section": "System Context",
+        "score": 0.5229228934453206,
+        "excerpt": "System Context\nVehicle Control ECU exchanges information with Engine Control ECU and Diagnostic Gateway. CAN is\nused for control traffic; Ethernet is used for diagnostic gateway uplink. Sensor Manager provides normalized\nvehicle and engine signals.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 2"
+      }
+    ]
+  },
+  {
+    "id": "Q003",
+    "category": "interface",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided project evidence, EngineSpeedInterface carries EngineSpeed.",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.7258963711792608,
+        "excerpt": "Interfaces and Ports\nEngineSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Interfaces",
+        "score": 0.7084001914264624,
+        "excerpt": "Interfaces\nEngineSpeedInterface provides EngineSpeed and EngineSpeedStatus. EngineCommandInterface carries\nEngineCommand. EngineControlSWC requires VehicleSpeedInterface and provides EngineSpeedInterface.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.7071026507894796,
+        "excerpt": "Interfaces and Ports\nPowertrainSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 5,
+        "section": "Communication",
+        "score": 0.5848357123271407,
+        "excerpt": "Communication\nEngineSpeedInterface is transported on CAN0. EngineCommandInterface is transported on CAN0.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 7,
+        "section": "Runnables and Signals",
+        "score": 0.555913686407484,
+        "excerpt": "Runnables and Signals\nEngineControlSWC contains runnable UpdateEngineState. VehicleControlSWC contains runnable\nComputeVehicleCommand. Signals include EngineSpeed, EngineSpeedStatus, VehicleSpeed and\nVehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 7"
+      }
+    ]
+  },
+  {
+    "id": "Q004",
+    "category": "interface",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, VehicleSpeedInterface carries VehicleSpeed.",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.6912076486783878,
+        "excerpt": "Interfaces and Ports\nEngineSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.6787411203360512,
+        "excerpt": "Interfaces and Ports\nPowertrainSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Interfaces",
+        "score": 0.635065610173153,
+        "excerpt": "Interfaces\nEngineSpeedInterface provides EngineSpeed and EngineSpeedStatus. EngineCommandInterface carries\nEngineCommand. EngineControlSWC requires VehicleSpeedInterface and provides EngineSpeedInterface.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 5,
+        "section": "Communication",
+        "score": 0.552364388419797,
+        "excerpt": "Communication\nEngineSpeedInterface is transported on CAN0. EngineCommandInterface is transported on CAN0.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 7,
+        "section": "Runnables and Signals",
+        "score": 0.5260049129110487,
+        "excerpt": "Runnables and Signals\nEngineControlSWC contains runnable UpdateEngineState. VehicleControlSWC contains runnable\nComputeVehicleCommand. Signals include EngineSpeed, EngineSpeedStatus, VehicleSpeed and\nVehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 7"
+      }
+    ]
+  },
+  {
+    "id": "Q005",
+    "category": "port",
+    "keyword_correct": false,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, the EngineSpeedInterface carries EngineSpeed and EngineSpeedStatus.",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.5606239102066957,
+        "excerpt": "Interfaces and Ports\nPowertrainSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.5582950420697534,
+        "excerpt": "Interfaces and Ports\nEngineSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Interfaces",
+        "score": 0.5250037934532679,
+        "excerpt": "Interfaces\nEngineSpeedInterface provides EngineSpeed and EngineSpeedStatus. EngineCommandInterface carries\nEngineCommand. EngineControlSWC requires VehicleSpeedInterface and provides EngineSpeedInterface.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 5,
+        "section": "Communication",
+        "score": 0.5185399682476013,
+        "excerpt": "Communication\nEngineSpeedInterface is transported on CAN0. EngineCommandInterface is transported on CAN0.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 6,
+        "section": "Revision Note",
+        "score": 0.4863750637784684,
+        "excerpt": "Revision Note\nThe previous revision used EngineSpeedInterface. This revision uses PowertrainSpeedInterface. Page 4\nstill refers to EngineSpeedInterface in a legacy note, creating a POTENTIAL INCONSISTENCY for review.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 6"
+      }
+    ]
+  },
+  {
+    "id": "Q006",
+    "category": "port",
+    "keyword_correct": false,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, the required VehicleSpeedInterface carries VehicleSpeed.",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.5192044851114143,
+        "excerpt": "Interfaces and Ports\nPowertrainSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.5102051733110631,
+        "excerpt": "Interfaces and Ports\nEngineSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 7,
+        "section": "Communication",
+        "score": 0.48133231022246925,
+        "excerpt": "Communication\nCAN channel CAN0 carries PowertrainSpeedInterface, VehicleSpeedInterface and VehicleCommand\nsignals.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 7"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 5,
+        "section": "Communication",
+        "score": 0.4801799044392185,
+        "excerpt": "Communication\nEngineSpeedInterface is transported on CAN0. EngineCommandInterface is transported on CAN0.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Interfaces",
+        "score": 0.46008621768146407,
+        "excerpt": "Interfaces\nEngineSpeedInterface provides EngineSpeed and EngineSpeedStatus. EngineCommandInterface carries\nEngineCommand. EngineControlSWC requires VehicleSpeedInterface and provides EngineSpeedInterface.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      }
+    ]
+  },
+  {
+    "id": "Q007",
+    "category": "dependency",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, VehicleControlSWC depends on EngineControlSWC for engine state. [Source: vehicle_control_hld_v1.pdf, Page 5]",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 5,
+        "section": "Dependencies",
+        "score": 0.6209759549524517,
+        "excerpt": "Dependencies\nVehicleControlSWC depends on EngineControlSWC for engine state and depends on SensorManagerSWC\nfor vehicle speed. DiagnosticManagerSWC reads health information from EngineControlSWC and\nSensorManagerSWC.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Dependencies",
+        "score": 0.6155909942365544,
+        "excerpt": "Dependencies\nEngineControlSWC depends on SensorManagerSWC for sensor input and VehicleControlSWC for\napproved engine command requests.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 5,
+        "section": "Dependencies",
+        "score": 0.6070743496387706,
+        "excerpt": "Dependencies\nVehicleControlSWC now depends on PowertrainCoordinatorSWC for powertrain coordination and\nSensorManagerSWC for vehicle speed. DiagnosticManagerSWC reads health information from\nEngineControlSWC and SensorManagerSWC.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.5956778284018316,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostics.\nPowertrainCoordinatorSWC is a new coordination component.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 2,
+        "section": "Engine Components",
+        "score": 0.5865004075770528,
+        "excerpt": "Engine Components\nEngineControlSWC manages engine speed, engine state and engine control command processing.\nSensorManagerSWC supplies normalized engine sensor information.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 2"
+      }
+    ]
+  },
+  {
+    "id": "Q008",
+    "category": "component",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, SensorManagerSWC provides normalized engine sensor information. [Source: engine_control_hld_v1.pdf, Page 2]",
+    "citations": [
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 2,
+        "section": "Engine Components",
+        "score": 0.47858132942402337,
+        "excerpt": "Engine Components\nEngineControlSWC manages engine speed, engine state and engine control command processing.\nSensorManagerSWC supplies normalized engine sensor information.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 2"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Dependencies",
+        "score": 0.45747857265250824,
+        "excerpt": "Dependencies\nEngineControlSWC depends on SensorManagerSWC for sensor input and VehicleControlSWC for\napproved engine command requests.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.4572497060906392,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostic\nrequests and health reporting.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.4475085640892191,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostics.\nPowertrainCoordinatorSWC is a new coordination component.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 2,
+        "section": "System Context",
+        "score": 0.4398935438292674,
+        "excerpt": "System Context\nVehicle Control ECU exchanges information with Engine Control ECU and Diagnostic Gateway. CAN is\nused for control traffic; Ethernet is used for diagnostic gateway uplink. Sensor Manager provides normalized\nvehicle and engine signals.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 2"
+      }
+    ]
+  },
+  {
+    "id": "Q009",
+    "category": "communication",
+    "keyword_correct": true,
+    "citation_source_hit": false,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, EngineSpeedInterface is transported on CAN0. [Source: engine_control_hld_v1.pdf, Page 5]",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.6420899078099815,
+        "excerpt": "Interfaces and Ports\nEngineSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Interfaces",
+        "score": 0.6291922152782494,
+        "excerpt": "Interfaces\nEngineSpeedInterface provides EngineSpeed and EngineSpeedStatus. EngineCommandInterface carries\nEngineCommand. EngineControlSWC requires VehicleSpeedInterface and provides EngineSpeedInterface.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.6273681562239901,
+        "excerpt": "Interfaces and Ports\nPowertrainSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 5,
+        "section": "Communication",
+        "score": 0.5949890417671823,
+        "excerpt": "Communication\nEngineSpeedInterface is transported on CAN0. EngineCommandInterface is transported on CAN0.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 5"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 7,
+        "section": "Communication",
+        "score": 0.5476174264721194,
+        "excerpt": "Communication\nCAN channel CAN0 carries PowertrainSpeedInterface, VehicleSpeedInterface and VehicleCommand\nsignals.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 7"
+      }
+    ]
+  },
+  {
+    "id": "Q010",
+    "category": "runnable",
+    "keyword_correct": true,
+    "citation_source_hit": true,
+    "mode": "OLLAMA",
+    "answer": "According to the provided evidence, the runnable that computes vehicle commands is ComputeVehicleCommand, which is contained in VehicleControlSWC. [Source: vehicle_control_hld_v1.pdf, Page 7]",
+    "citations": [
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 7,
+        "section": "Runnables and Signals",
+        "score": 0.5738701868784186,
+        "excerpt": "Runnables and Signals\nEngineControlSWC contains runnable UpdateEngineState. VehicleControlSWC contains runnable\nComputeVehicleCommand. Signals include EngineSpeed, EngineSpeedStatus, VehicleSpeed and\nVehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 7"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.490819766994529,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostics.\nPowertrainCoordinatorSWC is a new coordination component.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "vehicle_control_hld_v1.pdf",
+        "page": 3,
+        "section": "Software Components",
+        "score": 0.4837200054642329,
+        "excerpt": "Software Components\nVehicleControlSWC coordinates high-level vehicle behavior. EngineControlSWC manages engine-control\ncommands. SensorManagerSWC aggregates sensor inputs. DiagnosticManagerSWC handles diagnostic\nrequests and health reporting.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 3"
+      },
+      {
+        "filename": "engine_control_hld_v1.pdf",
+        "page": 4,
+        "section": "Dependencies",
+        "score": 0.470339052424089,
+        "excerpt": "Dependencies\nEngineControlSWC depends on SensorManagerSWC for sensor input and VehicleControlSWC for\napproved engine command requests.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      },
+      {
+        "filename": "vehicle_control_hld_v2.pdf",
+        "page": 4,
+        "section": "Interfaces and Ports",
+        "score": 0.46429951590819046,
+        "excerpt": "Interfaces and Ports\nPowertrainSpeedInterface carries EngineSpeed and EngineSpeedStatus. VehicleSpeedInterface carries\nVehicleSpeed. EngineControlSWC provides P_EngineSpeed and P_EngineStatus and requires\nR_VehicleSpeed. VehicleControlSWC requires R_EngineSpeed and provides P_VehicleCommand.\nSYNTHETIC DATA FOR ACADEMIC PROJECT - Page 4"
+      }
+    ]
+  }
+]

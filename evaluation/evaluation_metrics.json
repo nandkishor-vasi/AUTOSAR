@@ -1,0 +1,14 @@
+{
+  "test_set_size": 30,
+  "retrieval_hit_rate": 0.9,
+  "answer_keyword_correctness": 0.9,
+  "citation_coverage": 1.0,
+  "citation_correctness": 0.9,
+  "ingestion": {
+    "pages": 28,
+    "chunks": 28,
+    "entities": 88,
+    "relationships": 83
+  },
+  "method": "Deterministic academic evaluation: expected concepts/keywords and source page matching. LLM generation was not required for the benchmark; when Ollama is unavailable, DEMO/FALLBACK mode is used."
+}

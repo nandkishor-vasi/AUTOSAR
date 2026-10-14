@@ -1,0 +1,454 @@
+[
+  {
+    "id": "Q001",
+    "question": "Which software component coordinates high-level vehicle behavior?",
+    "expected_answer": "VehicleControlSWC",
+    "expected_entities": [
+      "VehicleControlSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:3"
+    ],
+    "expected_concepts": [
+      "VehicleControlSWC"
+    ],
+    "category": "component"
+  },
+  {
+    "id": "Q002",
+    "question": "Which software component manages engine control commands?",
+    "expected_answer": "EngineControlSWC",
+    "expected_entities": [
+      "EngineControlSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:3"
+    ],
+    "expected_concepts": [
+      "EngineControlSWC"
+    ],
+    "category": "component"
+  },
+  {
+    "id": "Q003",
+    "question": "Which interface carries EngineSpeed?",
+    "expected_answer": "EngineSpeedInterface",
+    "expected_entities": [
+      "EngineSpeedInterface"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:4"
+    ],
+    "expected_concepts": [
+      "EngineSpeedInterface"
+    ],
+    "category": "interface"
+  },
+  {
+    "id": "Q004",
+    "question": "Which interface carries VehicleSpeed?",
+    "expected_answer": "VehicleSpeedInterface",
+    "expected_entities": [
+      "VehicleSpeedInterface"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:4"
+    ],
+    "expected_concepts": [
+      "VehicleSpeedInterface"
+    ],
+    "category": "interface"
+  },
+  {
+    "id": "Q005",
+    "question": "What is the provided engine speed port?",
+    "expected_answer": "P_EngineSpeed",
+    "expected_entities": [
+      "P_EngineSpeed"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:4"
+    ],
+    "expected_concepts": [
+      "P_EngineSpeed"
+    ],
+    "category": "port"
+  },
+  {
+    "id": "Q006",
+    "question": "What is the required vehicle speed port?",
+    "expected_answer": "R_VehicleSpeed",
+    "expected_entities": [
+      "R_VehicleSpeed"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:4"
+    ],
+    "expected_concepts": [
+      "R_VehicleSpeed"
+    ],
+    "category": "port"
+  },
+  {
+    "id": "Q007",
+    "question": "Which component does VehicleControlSWC depend on for engine state?",
+    "expected_answer": "EngineControlSWC",
+    "expected_entities": [
+      "EngineControlSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:5"
+    ],
+    "expected_concepts": [
+      "EngineControlSWC"
+    ],
+    "category": "dependency"
+  },
+  {
+    "id": "Q008",
+    "question": "Which component provides normalized sensor input?",
+    "expected_answer": "SensorManagerSWC",
+    "expected_entities": [
+      "SensorManagerSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:3"
+    ],
+    "expected_concepts": [
+      "SensorManagerSWC"
+    ],
+    "category": "component"
+  },
+  {
+    "id": "Q009",
+    "question": "Which channel carries EngineSpeedInterface?",
+    "expected_answer": "CAN0",
+    "expected_entities": [
+      "CAN0"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:6"
+    ],
+    "expected_concepts": [
+      "CAN0"
+    ],
+    "category": "communication"
+  },
+  {
+    "id": "Q010",
+    "question": "Which runnable computes vehicle commands?",
+    "expected_answer": "ComputeVehicleCommand",
+    "expected_entities": [
+      "ComputeVehicleCommand"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:7"
+    ],
+    "expected_concepts": [
+      "ComputeVehicleCommand"
+    ],
+    "category": "runnable"
+  },
+  {
+    "id": "Q011",
+    "question": "Which runnable updates engine state?",
+    "expected_answer": "UpdateEngineState",
+    "expected_entities": [
+      "UpdateEngineState"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:7"
+    ],
+    "expected_concepts": [
+      "UpdateEngineState"
+    ],
+    "category": "runnable"
+  },
+  {
+    "id": "Q012",
+    "question": "Which component handles diagnostic sessions?",
+    "expected_answer": "DiagnosticManagerSWC",
+    "expected_entities": [
+      "DiagnosticManagerSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:8"
+    ],
+    "expected_concepts": [
+      "DiagnosticManagerSWC"
+    ],
+    "category": "diagnostic"
+  },
+  {
+    "id": "Q013",
+    "question": "What is the document version of vehicle_control_hld_v1?",
+    "expected_answer": "v1",
+    "expected_entities": [
+      "v1"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:1"
+    ],
+    "expected_concepts": [
+      "v1"
+    ],
+    "category": "version"
+  },
+  {
+    "id": "Q014",
+    "question": "Does the architecture define EngineSpeedStatus?",
+    "expected_answer": "EngineSpeedStatus",
+    "expected_entities": [
+      "EngineSpeedStatus"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:4"
+    ],
+    "expected_concepts": [
+      "EngineSpeedStatus"
+    ],
+    "category": "signal"
+  },
+  {
+    "id": "Q015",
+    "question": "Does VehicleControlSWC require R_EngineSpeed?",
+    "expected_answer": "R_EngineSpeed",
+    "expected_entities": [
+      "R_EngineSpeed"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:4"
+    ],
+    "expected_concepts": [
+      "R_EngineSpeed"
+    ],
+    "category": "port"
+  },
+  {
+    "id": "Q016",
+    "question": "Which gateway bridges CAN0 and diagnostic Ethernet?",
+    "expected_answer": "DiagnosticGatewaySWC",
+    "expected_entities": [
+      "DiagnosticGatewaySWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:6"
+    ],
+    "expected_concepts": [
+      "DiagnosticGatewaySWC"
+    ],
+    "category": "component"
+  },
+  {
+    "id": "Q017",
+    "question": "Which component reads health information from EngineControlSWC?",
+    "expected_answer": "DiagnosticManagerSWC",
+    "expected_entities": [
+      "DiagnosticManagerSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:5"
+    ],
+    "expected_concepts": [
+      "DiagnosticManagerSWC"
+    ],
+    "category": "dependency"
+  },
+  {
+    "id": "Q018",
+    "question": "Which interface is used in the v2 revision for powertrain speed?",
+    "expected_answer": "PowertrainSpeedInterface",
+    "expected_entities": [
+      "PowertrainSpeedInterface"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v2.pdf:4"
+    ],
+    "expected_concepts": [
+      "PowertrainSpeedInterface"
+    ],
+    "category": "revision"
+  },
+  {
+    "id": "Q019",
+    "question": "Which new component appears in v2?",
+    "expected_answer": "PowertrainCoordinatorSWC",
+    "expected_entities": [
+      "PowertrainCoordinatorSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v2.pdf:3"
+    ],
+    "expected_concepts": [
+      "PowertrainCoordinatorSWC"
+    ],
+    "category": "revision"
+  },
+  {
+    "id": "Q020",
+    "question": "What component was added in v2?",
+    "expected_answer": "PowertrainCoordinatorSWC",
+    "expected_entities": [
+      "PowertrainCoordinatorSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v2.pdf:3"
+    ],
+    "expected_concepts": [
+      "PowertrainCoordinatorSWC"
+    ],
+    "category": "comparison"
+  },
+  {
+    "id": "Q021",
+    "question": "What terminology changed between v1 and v2?",
+    "expected_answer": "EngineSpeedInterface to PowertrainSpeedInterface",
+    "expected_entities": [
+      "EngineSpeedInterface to PowertrainSpeedInterface"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v2.pdf:6"
+    ],
+    "expected_concepts": [
+      "EngineSpeedInterface to PowertrainSpeedInterface"
+    ],
+    "category": "comparison"
+  },
+  {
+    "id": "Q022",
+    "question": "Which interface is legacy in v2?",
+    "expected_answer": "EngineSpeedInterface",
+    "expected_entities": [
+      "EngineSpeedInterface"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v2.pdf:6"
+    ],
+    "expected_concepts": [
+      "EngineSpeedInterface"
+    ],
+    "category": "inconsistency"
+  },
+  {
+    "id": "Q023",
+    "question": "Which network technology is used for diagnostic gateway uplink?",
+    "expected_answer": "Ethernet",
+    "expected_entities": [
+      "Ethernet"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:2"
+    ],
+    "expected_concepts": [
+      "Ethernet"
+    ],
+    "category": "communication"
+  },
+  {
+    "id": "Q024",
+    "question": "Which network technology is used for control traffic?",
+    "expected_answer": "CAN",
+    "expected_entities": [
+      "CAN"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:2"
+    ],
+    "expected_concepts": [
+      "CAN"
+    ],
+    "category": "communication"
+  },
+  {
+    "id": "Q025",
+    "question": "Which component depends on SensorManagerSWC for vehicle speed?",
+    "expected_answer": "VehicleControlSWC",
+    "expected_entities": [
+      "VehicleControlSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:5"
+    ],
+    "expected_concepts": [
+      "VehicleControlSWC"
+    ],
+    "category": "dependency"
+  },
+  {
+    "id": "Q026",
+    "question": "What interface carries VehicleCommand?",
+    "expected_answer": "VehicleCommand",
+    "expected_entities": [
+      "VehicleCommand"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:6"
+    ],
+    "expected_concepts": [
+      "VehicleCommand"
+    ],
+    "category": "signal"
+  },
+  {
+    "id": "Q027",
+    "question": "Which component aggregates sensor inputs?",
+    "expected_answer": "SensorManagerSWC",
+    "expected_entities": [
+      "SensorManagerSWC"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:3"
+    ],
+    "expected_concepts": [
+      "SensorManagerSWC"
+    ],
+    "category": "component"
+  },
+  {
+    "id": "Q028",
+    "question": "Which interface is expected to be consistent in v1?",
+    "expected_answer": "EngineSpeedInterface",
+    "expected_entities": [
+      "EngineSpeedInterface"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:9"
+    ],
+    "expected_concepts": [
+      "EngineSpeedInterface"
+    ],
+    "category": "consistency"
+  },
+  {
+    "id": "Q029",
+    "question": "What should an engineer review after an interface change?",
+    "expected_answer": "interface definition, connected ports, dependent components",
+    "expected_entities": [
+      "interface definition",
+      "connected ports",
+      "dependent components"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:9"
+    ],
+    "expected_concepts": [
+      "interface definition, connected ports, dependent components"
+    ],
+    "category": "impact"
+  },
+  {
+    "id": "Q030",
+    "question": "Can AI output be used without engineering review?",
+    "expected_answer": "No; AI output requires engineering review",
+    "expected_entities": [
+      "No; AI output requires engineering review"
+    ],
+    "expected_sources": [
+      "vehicle_control_hld_v1.pdf:10"
+    ],
+    "expected_concepts": [
+      "No; AI output requires engineering review"
+    ],
+    "category": "governance"
+  }
+]
